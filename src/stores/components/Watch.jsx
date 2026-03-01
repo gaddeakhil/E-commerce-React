@@ -21,7 +21,7 @@ const Watch = () => {
               <Link to="/watch">
                 <img
                   className="card-img-top img-fluid"
-                  src={item.image}
+                   src={${import.meta.env.BASE_URL}${item.image}}
                   alt={`Watch ${index + 1}`}
                   style={{
                     objectFit: "cover",   // fills box edge-to-edge
