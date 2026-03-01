@@ -21,7 +21,7 @@ const Woman = () => {
               <Link to="/woman">
                 <img
                   className="card-img-top img-fluid"
-                  src={item.image}
+                  src={${import.meta.env.BASE_URL}${item.image}}
                   alt={`Woman Dressing ${index + 1}`}
                   style={{
                     objectFit: "cover",   // fills box edge-to-edge
