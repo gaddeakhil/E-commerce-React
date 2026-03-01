@@ -1,7 +1,7 @@
 export const acData = [{
         "id": "1",
         "product": "Air Conditioner",
-        "image": "/assets/Ac/1.jpg",
+        "image": "/E-commerce-React/assets/Ac/1.jpg",
         "company": "LG",
         "model": "CoolTech 5000",
         "price": "799.99",
