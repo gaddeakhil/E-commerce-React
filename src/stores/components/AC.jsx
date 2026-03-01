@@ -20,7 +20,7 @@ const AC = () => {
               <Link to="/ac">
                 <img
                   className="card-img-top img-fluid"
-                  src={item.image}
+                  src={${import.meta.env.BASE_URL}${item.image}}
                   alt={`AC ${index + 1}`}
                   style={{
                     objectFit: "cover",
