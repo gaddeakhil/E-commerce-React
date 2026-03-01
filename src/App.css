@@ -19,6 +19,9 @@ body {
     position: sticky;
     top: 0;
 }
+body {
+  padding-top: 100px; /* Adjust based on navbar + submenu height */
+}
 
 .navSection {
     display: flex;
@@ -31,9 +34,17 @@ body {
     align-items: center;
     padding: 0px 50px;
 }
+a{
+    text-decoration: none;
+}
 
 .title h2 {
     color: white;
+}
+
+.user-detail{
+    color: white;
+    text-decoration: none;
 }
 
 .custom-link {
@@ -279,3 +290,91 @@ ul li {
         font-size: small;
     }
 }
+/* Container centers the form */
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form styling */
+.signin-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Heading */
+.signin-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Input fields */
+.signin-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.signin-form input:focus {
+  border-color: #6c63ff;
+}
+
+/* Button */
+.signin-form button {
+  padding: 12px;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.signin-form button:hover {
+  background: #574b90;
+}
+
+/* checkbox */
+/* Make filter container full width */
+.d-flex.flex-column {
+  width: 100%;
+}
+
+/* Align checkbox and label properly */
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;              /* important for vertical straight line */
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #0d6efd;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Straight line check */

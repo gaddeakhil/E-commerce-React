@@ -3,7 +3,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import './App.css'
 import LandingPage from './stores/pages/LandingPage'
 import Kitchen from './stores/components/Kitchen'
 import MobilePage from './stores/pages/MobilePage'
@@ -25,6 +24,7 @@ import MenSingle from './stores/singles/MenSingle'
 import WatchSingle from './stores/singles/WatchSingle'
 import WomanSingle from './stores/singles/WomanSingle'
 import FridgeSingle from './stores/singles/FridgeSingle'
+import SingIn from './stores/pages/SingIn'
 
 
 const App = () => {
@@ -51,6 +51,7 @@ const App = () => {
       <Route path='/watch/:id' element = {<WatchSingle />} />
       <Route path='/woman/:id' element = {<WomanSingle />} />
       <Route path='/fridge/:id' element = {<FridgeSingle />} />
+      <Route path='/signin' element = {<SingIn/>} />
       </Routes>
     </div>
   )

@@ -1,87 +1,89 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import { useCart } from "../context/CartContext";
 
 const Navbar = () => {
-
-  const {cartItems }= useCart()
+  const { cartItems } = useCart();
 
   return (
-    <div className="navbar-section">
+    <>
+      {/* Wrapper for both navbars */}
+      <div className="fixed-top w-100">
 
-      <div className="navSection">
-      <Link to='/' className="custom-link">
-  <div className="title">
-    <h2>E-Mart</h2>
-  </div>
-</Link>
+        {/* Main Navbar */}
+        <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+          <div className="container-fluid">
 
-        <div className="search">
-          <input type="text" placeholder="Search..." />
-        </div>
-        <div className="user">
-          <div className="user-detail">SignIN/SignUp</div>
-        </div>
-          <Link to= '/cart'>
-          <div className="cart">Cart
-          <span>
-            {cartItems.length}
-          </span>
+            <Link to="/" className="navbar-brand">
+              <h2 className="m-0 text-primary">SwiftMart</h2>
+            </Link>
+
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarContent"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse" id="navbarContent">
+
+              <form className="d-flex ms-auto me-3">
+                <input
+                  className="form-control me-2"
+                  type="search"
+                  placeholder="Search..."
+                />
+                <button className="btn btn-outline-primary" type="submit">
+                  Search
+                </button>
+              </form>
+
+              <ul className="navbar-nav mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <Link to="/signin" className="nav-link">
+                    Sign In / Sign Up
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/cart" className="nav-link">
+                    Cart{" "}
+                    <span className="badge bg-primary">
+                      {cartItems.length}
+                    </span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
-          </Link>
+        </nav>
+
+        {/* Submenu */}
+        <div className="bg-primary text-white">
+          <div className="container">
+            <ul className="nav justify-content-center flex-wrap py-2 m-0">
+              <li className="nav-item"><Link to="/mobiles" className="nav-link text-white">Mobiles</Link></li>
+              <li className="nav-item"><Link to="/computers" className="nav-link text-white">Computers</Link></li>
+              <li className="nav-item"><Link to="/watch" className="nav-link text-white">Watches</Link></li>
+              <li className="nav-item"><Link to="/men" className="nav-link text-white">Mens Wear</Link></li>
+              <li className="nav-item"><Link to="/woman" className="nav-link text-white">Woman Wear</Link></li>
+              <li className="nav-item"><Link to="/furniture" className="nav-link text-white">Furniture</Link></li>
+              <li className="nav-item"><Link to="/kitchen" className="nav-link text-white">Kitchen</Link></li>
+              <li className="nav-item"><Link to="/fridge" className="nav-link text-white">Fridge</Link></li>
+              <li className="nav-item"><Link to="/" className="nav-link text-white">Books</Link></li>
+              <li className="nav-item"><Link to="/" className="nav-link text-white">Speakers</Link></li>
+              <li className="nav-item"><Link to="/" className="nav-link text-white">TV's</Link></li>
+              <li className="nav-item"><Link to="/ac" className="nav-link text-white">AC</Link></li>
+            </ul>
+          </div>
+        </div>
+
       </div>
-      <div className="subMenu">
-        <ul>
-          <Link to="/mobiles" className="custom-link">
-            <li>Mobiles</li>
-          </Link>
 
-          <Link to="/computers" className="custom-link">
-            <li>Computers</li>
-          </Link>
-
-          <Link to="/watch" className="custom-link">
-            <li>Watches</li>
-          </Link>
-
-          <Link to="/men" className="custom-link">
-            <li>Mens Wear</li>
-          </Link>
-
-          <Link to="/woman" className="custom-link">
-            <li>Woman Wear</li>
-          </Link>
-
-          <Link to="/furniture" className="custom-link">
-            <li>Furniture</li>
-          </Link>
-
-          <Link to="/kitchen" className="custom-link">
-            <li>Kitchen</li>
-          </Link>
-
-          <Link to="/fridge" className="custom-link">
-            <li>Fridge</li>
-          </Link>
-          <Link to="/" className="custom-link">
-            <li>Books</li>
-          </Link>
-
-          <Link to="/" className="custom-link">
-            <li>Speakers</li>
-          </Link>
-
-          <Link to="/" className="custom-link">
-            <li>TV's</li>
-          </Link>
-
-          <Link to="/ac" className="custom-link">
-            <li>AC</li>
-          </Link>
-        </ul>
-      </div>
-    </div >
+      {/* Page content spacing */}
+      <div style={{ marginTop: "120px" }}></div>
+    </>
   );
 };
 
